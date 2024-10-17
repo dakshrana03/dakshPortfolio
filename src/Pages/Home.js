@@ -7,7 +7,6 @@ import Linkedinicon from "../assets/img/socialicons/linkedin.png";
 import Instagramicon from "../assets/img/socialicons/instagram.png";
 import Githubicon from "../assets/img/socialicons/github.png";
 import MailIcon from "../assets/img/socialicons/email.png";
-import Star from "//Users/dakshrana/Documents/Yelp Camp/daksh-Website/dakshwebsite/src/Pages/high-resolution-star-image.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
