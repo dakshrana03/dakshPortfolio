@@ -1,0 +1,74 @@
+.jsprojects {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.jsprojects h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.jsprojects .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.jsprojects .col-sm-6 {
+  flex: 0 0 45%;
+  /* Adjust to create 2 columns with some space */
+  margin-bottom: 30px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jsprojects .col-sm-6:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.jsprojects h3 {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.jsprojects .github {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.jsprojects .github:hover {
+  background-color: #0056b3;
+}
+
+.jsprojects .github img {
+  margin-left: 10px;
+  width: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .jsprojects .col-sm-6 {
+    flex: 0 0 100%;
+  }
+}

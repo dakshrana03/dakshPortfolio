@@ -1,0 +1,258 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  position: relative;
+  padding: 0 5%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Image Section */
+.imgsec {
+  position: relative;
+}
+
+.imgsec img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+  border: 5px solid #000;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05) translateX(50px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imgsec:hover img {
+  transform: scale(1.1) translateX(55px);
+}
+
+.bgblack {
+  background-color: #000;
+  position: absolute;
+  width: 90%;
+  height: 110vh;
+  top: -10%;
+  left: -8%;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Right Content Section */
+.rightcontent {
+  text-align: left;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Button Styling */
+
+/* Resume Button */
+.resume-btn {
+  padding: 10px 20px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  margin-bottom: 15px;
+}
+
+.resume-btn:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+  transform: scale(1.0) translateX(5%);
+}
+
+/* Hire Me Button */
+.hireme-btn {
+  padding: 10px 20px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.hireme-btn:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+  transform: scale(1.0) translateX(5%);
+}
+
+/* Social Media Icons */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  right: -90px;
+}
+
+.socialmedia a {
+  margin: 0 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialmedia a:hover {
+  transform: translateY(-5px);
+}
+
+.socialmedia img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.socialmedia img:hover {
+  filter: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="fade-right"] {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgsec img {
+    margin-top: 20px;
+    transform: scale(1);
+  }
+
+  .socialmedia {
+    bottom: -80px;
+    right: 0;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Button Styling */
+  .rightcontent .row {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .resume-btn,
+  .hireme-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Stars Background Styling */
+#stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  /* Prevent interaction */
+}
+
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  /* Smaller stars, denser spread */
+}
+
+.stars {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: move-stars 60s linear infinite;
+}
+
+.stars2 {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: move-stars 120s linear infinite;
+  opacity: 0.6;
+}
+
+.stars3 {
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  animation: move-stars 180s linear infinite;
+  opacity: 0.4;
+}
+
+/* Animation Keyframes */
+@keyframes move-stars {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}

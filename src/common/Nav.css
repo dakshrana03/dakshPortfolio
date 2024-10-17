@@ -1,0 +1,178 @@
+/* Styles for the desktop navigation */
+#navigation {
+  height: 50px;
+  /* Reduced height */
+  background: #000;
+  /* Black background */
+  width: 100%;
+  /* Full width */
+  text-align: center;
+  /* Center text */
+  color: #fff;
+  /* White text */
+  display: flex;
+  /* Use flexbox */
+  justify-content: space-around;
+  /* Distribute space evenly */
+  align-items: center;
+  /* Center vertically */
+  position: fixed;
+  /* Fixed position */
+  z-index: 2;
+  /* Stack on top of other content */
+  top: 0;
+  /* Align to the top */
+  padding: 0 10px;
+  /* Padding around the nav bar */
+}
+
+/* Styling the icon list */
+#navigation ul {
+  display: flex;
+  /* Use flexbox for horizontal layout */
+  list-style: none;
+  /* Remove list styling */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+}
+
+/* List items */
+#navigation ul li {
+  margin: 0 15px;
+  /* Spacing between items */
+  height: 30px;
+  /* Ensure li matches the height of the icons */
+  display: flex;
+  /* Ensure the li elements are flex containers */
+  align-items: center;
+  /* Vertically align the icons within li */
+}
+
+/* Icons styling */
+#navigation img {
+  height: 100%;
+  /* Make icons fit the height of the li */
+  width: auto;
+  /* Maintain aspect ratio */
+  filter: brightness(0) invert(1);
+  /* Make icons white */
+  transition: transform 0.3s;
+  /* Add transition for hover effect */
+}
+
+/* Add hover effect */
+#navigation ul li:hover img {
+  transform: scale(1.1);
+  /* Slightly scale up the icon on hover */
+}
+
+/* Mobile navigation styles */
+#navigation-mob {
+  display: none;
+  /* Initially hidden */
+}
+
+@media (max-width: 767px) {
+  #navigation {
+    display: none;
+    /* Hide desktop navigation on small screens */
+  }
+
+  #navigation-mob {
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    /* Align to the top */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    background: #000;
+    /* Black background */
+    height: 50px;
+    /* Reduced height */
+    z-index: 999;
+    /* High z-index to stack above other content */
+    display: flex;
+    /* Flexbox for layout */
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    /* Center vertically */
+    padding: 0 15px;
+    /* Padding */
+  }
+
+  #navigation-mob h1 {
+    font-size: 30px !important;
+    /* Larger font size for title */
+    margin: 0;
+    /* Remove default margin */
+    color: #fff;
+    /* White text */
+  }
+
+  #navigation-mob h1 a {
+    text-decoration: none;
+    /* Remove underline */
+    color: #fff;
+    /* White text */
+  }
+
+  #navigation-mob ul {
+    display: flex;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    background-color: #000;
+    /* Background color */
+    height: 100vh;
+    /* Full height */
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    position: absolute;
+    /* Absolute positioning */
+    top: 50px;
+    /* Below the header */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    display: none;
+    /* Initially hidden */
+  }
+
+  #navigation-mob ul.show {
+    display: flex;
+    /* Show the menu when toggled */
+  }
+
+  #navigation-mob ul a {
+    color: #fff;
+    /* White text */
+    text-decoration: none;
+    /* Remove underline */
+    margin-bottom: 3%;
+    /* Spacing */
+    font-size: 20px;
+    /* Font size */
+    font-weight: 600;
+    /* Bold font */
+    font-family: "Montserrat", sans-serif;
+    /* Font family */
+  }
+}
+
+/* Optional styles for toggling the menu */
+.nav-toggle {
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  font-size: 24px;
+  /* Icon size */
+  color: #fff;
+  /* Icon color */
+}
