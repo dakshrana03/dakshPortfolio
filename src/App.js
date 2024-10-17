@@ -31,6 +31,8 @@ function App() {
       <Work/>
       <Contact/> */}
       <Routes>
+        <Route exact="true" path="/" element={<Home />}></Route>
+        <Route exact="true" path="/dakshPortfolio" element={<Home />}></Route>
         <Route exact="true" path="/myportfolio" element={<Home />}></Route>
         <Route path="/myportfolio" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
